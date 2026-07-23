@@ -1,0 +1,5 @@
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 system-ui,sans-serif}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+.skip-link{position:absolute;left:-9999px}.skip-link:focus{left:1rem;top:1rem;background:#fff;color:#000;padding:.5rem}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body,h1,h2,h3,p,figure,blockquote,ul{margin:0}ul{padding:0;list-style:none}img{display:block;max-width:100%}

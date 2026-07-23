@@ -1,0 +1,22 @@
+[data-depth]{
+will-change:transform;
+transform:translate3d(0,0,0);
+transition:transform 120ms linear;
+}
+:root{
+--ambient:.2;
+}
+.scene{
+position:relative;
+overflow:hidden;
+}
+.scene::before{
+content:"";
+position:absolute;
+inset:0;
+pointer-events:none;
+opacity:calc(var(--ambient)*.08);
+background:
+radial-gradient(circle at 20% 30%,rgba(255,255,255,.10),transparent 35%),
+radial-gradient(circle at 80% 70%,rgba(255,255,255,.06),transparent 40%);
+}

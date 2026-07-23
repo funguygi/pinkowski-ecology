@@ -1,0 +1,14 @@
+ :root{
+--bg:#0f1c18;
+--surface:#16251f;
+--text:#edf2ec;
+--muted:#a9b8b0;
+--accent:#88a86a;
+--max-width:72rem;
+--space-1:.5rem;
+--space-2:1rem;
+--space-3:2rem;
+--space-4:4rem;
+--radius:.75rem;
+--transition:220ms ease;
+}

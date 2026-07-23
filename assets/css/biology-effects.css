@@ -1,0 +1,15 @@
+:root{
+--hypha-opacity:0;
+--hypha-scale:1;
+}
+#svg-root{
+position:fixed;
+inset:0;
+pointer-events:none;
+display:grid;
+place-items:center;
+opacity:var(--hypha-opacity);
+transform:scale(var(--hypha-scale));
+transition:opacity .35s ease,transform .35s ease;
+color:rgba(214,232,205,.35);
+}

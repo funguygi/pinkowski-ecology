@@ -1,0 +1,16 @@
+:root{
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-serif: "Iowan Old Style", Georgia, serif;
+  --measure: 68ch;
+}
+body{font-family:var(--font-sans);}
+h1,h2,h3{font-family:var(--font-serif);line-height:1.1;max-width:18ch;}
+p,li{max-width:var(--measure);}
+.eyebrow{
+  font-size:.8rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.lead{
+  font-size:clamp(1.15rem,2vw,1.5rem);
+}

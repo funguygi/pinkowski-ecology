@@ -1,0 +1,6 @@
+.button{display:inline-flex;padding:.9rem 1.4rem;background:var(--accent);color:#fff;border-radius:999px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow);transition:transform .25s ease}
+.card:hover{transform:translateY(-6px)}
+.gallery figure{aspect-ratio:4/3;border-radius:var(--radius);background:#cfc6b6}
+blockquote{border-left:4px solid var(--accent);padding-left:1rem;font-style:italic;color:var(--muted)}
+.skip-link{position:absolute;left:-999px}.skip-link:focus{left:1rem;top:1rem;background:#fff;padding:.5rem;border-radius:.5rem}

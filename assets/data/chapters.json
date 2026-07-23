@@ -1,0 +1,52 @@
+[
+  {
+    "id": "arrival",
+    "theme": "earth",
+    "title": "Arrival"
+  },
+  {
+    "id": "landscape",
+    "theme": "earth",
+    "title": "Landscape"
+  },
+  {
+    "id": "surface",
+    "theme": "earth",
+    "title": "Surface"
+  },
+  {
+    "id": "roots",
+    "theme": "root",
+    "title": "Roots"
+  },
+  {
+    "id": "rhizosphere",
+    "theme": "hypha",
+    "title": "Rhizosphere"
+  },
+  {
+    "id": "microbes",
+    "theme": "hypha",
+    "title": "Microbial Communities"
+  },
+  {
+    "id": "edna",
+    "theme": "water",
+    "title": "Environmental DNA"
+  },
+  {
+    "id": "computation",
+    "theme": "light",
+    "title": "Computational Ecology"
+  },
+  {
+    "id": "restoration",
+    "theme": "earth",
+    "title": "Restoration"
+  },
+  {
+    "id": "future",
+    "theme": "light",
+    "title": "Future"
+  }
+]

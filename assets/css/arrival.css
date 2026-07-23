@@ -1,0 +1,375 @@
+/* ==========================================================
+   ARRIVAL ROOM
+   Field Station v2.0.0-alpha.1
+========================================================== */
+
+.arrival-scene {
+
+    position: relative;
+
+    min-height: 100svh;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    isolation: isolate;
+
+}
+
+
+
+/* ==========================================================
+   Background Layers
+========================================================== */
+
+.scene-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    z-index: -5;
+
+}
+
+.sky-layer,
+.mountain-layer,
+.grass-layer {
+
+    position: absolute;
+
+    inset: 0;
+
+    will-change: transform;
+
+}
+
+/* Sky */
+
+.sky-layer {
+
+    background:
+
+        radial-gradient(circle at 50% 12%,
+            rgba(255,255,255,.12),
+            transparent 42%),
+
+        linear-gradient(
+            to bottom,
+
+            #0f2020 0%,
+
+            #17312d 40%,
+
+            #26453d 100%
+        );
+
+}
+
+/* Mountains */
+
+.mountain-layer {
+
+    bottom: -8vh;
+
+    top: auto;
+
+    height: 45vh;
+
+    background:
+
+        linear-gradient(
+            to top,
+
+            rgba(18,28,22,.95),
+
+            rgba(30,46,38,.65)
+
+        );
+
+    clip-path: polygon(
+
+        0% 100%,
+
+        0% 68%,
+
+        10% 62%,
+
+        22% 58%,
+
+        36% 63%,
+
+        50% 48%,
+
+        65% 56%,
+
+        78% 45%,
+
+        90% 58%,
+
+        100% 52%,
+
+        100% 100%
+
+    );
+
+}
+
+/* Grass */
+
+.grass-layer {
+
+    bottom: 0;
+
+    top: auto;
+
+    height: 24vh;
+
+    background:
+
+        linear-gradient(
+
+            to top,
+
+            #152118,
+
+            #223327
+
+        );
+
+}
+
+
+
+/* ==========================================================
+   Content
+========================================================== */
+
+.scene-content {
+
+    width: min(64rem,90vw);
+
+    display: grid;
+
+    gap: 1.5rem;
+
+    padding-top: 10vh;
+
+}
+
+
+
+/* Museum Label */
+
+.museum-label {
+
+    font-size: .72rem;
+
+    letter-spacing: .35em;
+
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,.58);
+
+}
+
+
+
+/* Observe */
+
+.arrival-observation {
+
+    font-size: clamp(1.2rem,2vw,1.6rem);
+
+    font-style: italic;
+
+    opacity: .82;
+
+}
+
+
+
+/* Main Title */
+
+.arrival-scene h1 {
+
+    font-size:
+
+        clamp(3.6rem,8vw,7rem);
+
+    max-width: 12ch;
+
+    line-height: .96;
+
+    margin: 0;
+
+    font-weight: 300;
+
+}
+
+
+
+/* Intro */
+
+.arrival-introduction {
+
+    max-width: 58ch;
+
+    font-size:
+
+        clamp(1.05rem,1.4vw,1.35rem);
+
+    color:
+
+        rgba(255,255,255,.74);
+
+}
+
+
+
+/* ==========================================================
+   Scroll Indicator
+========================================================== */
+
+.scroll-indicator {
+
+    position: absolute;
+
+    bottom: 2.5rem;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: .6rem;
+
+    opacity: .72;
+
+    font-size: .8rem;
+
+    letter-spacing: .14em;
+
+    text-transform: uppercase;
+
+}
+
+.scroll-indicator::after {
+
+    content: "";
+
+    width: 1px;
+
+    height: 4rem;
+
+    background:
+
+        linear-gradient(
+
+            transparent,
+
+            rgba(255,255,255,.55)
+
+        );
+
+}
+
+
+
+/* ==========================================================
+   Ambient Light Layer
+========================================================== */
+
+#ambient-light {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+
+        radial-gradient(
+
+            circle at 50% 15%,
+
+            rgba(255,255,255,.08),
+
+            transparent 48%
+
+        );
+
+    mix-blend-mode: screen;
+
+    z-index: -20;
+
+}
+
+
+
+/* ==========================================================
+   Mobile
+========================================================== */
+
+@media (max-width:700px){
+
+    .arrival-scene h1{
+
+        font-size:3.4rem;
+
+    }
+
+    .scene-content{
+
+        width:min(92vw,36rem);
+
+    }
+
+}
+
+/* ==========================================================
+   SVG World
+========================================================== */
+
+#svg-root {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -30;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+}
+
+#svg-root svg {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+}
+
+.scene-background {
+
+    display: none;
+
+}

@@ -1,0 +1,3 @@
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(rgba(18,24,18,.15),rgba(18,24,18,.45))}
+.hero-content{color:#fff}
+.content-section:nth-child(even){background:linear-gradient(var(--surface),#f5f1e9)}

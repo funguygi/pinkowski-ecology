@@ -1,0 +1,11 @@
+.room-grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));
+ gap:2rem;
+ align-items:start;
+}
+.stack>*+*{margin-top:1rem;}
+.container{
+ width:min(72rem,92vw);
+ margin-inline:auto;
+}

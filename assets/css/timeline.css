@@ -1,0 +1,28 @@
+.timeline{
+ position:relative;
+ padding-left:2rem;
+}
+.timeline::before{
+ content:"";
+ position:absolute;
+ left:.5rem;
+ top:0;
+ bottom:0;
+ width:2px;
+ background:currentColor;
+ opacity:.15;
+}
+.timeline-event{
+ position:relative;
+ margin-bottom:2rem;
+}
+.timeline-event::before{
+ content:"";
+ position:absolute;
+ left:-1.75rem;
+ top:.35rem;
+ width:.65rem;
+ height:.65rem;
+ border-radius:50%;
+ background:currentColor;
+}

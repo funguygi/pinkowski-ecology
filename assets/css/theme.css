@@ -1,0 +1,31 @@
+
+:root{
+ --sky-top:#8ea8b0;
+ --sky-bottom:#d8d3c8;
+ --forest:#53624f;
+ --paper:#f7f4ed;
+}
+html[data-theme="evening"]{
+ --sky-top:#24303b;
+ --sky-bottom:#4d5660;
+ --forest:#364137;
+}
+.hero{
+ background:
+ radial-gradient(circle at 50% 15%,rgba(255,255,255,.25),transparent 45%),
+ linear-gradient(var(--sky-top),var(--sky-bottom));
+}
+.hero .ridge{
+ position:absolute;left:0;right:0;bottom:0;height:38%;
+ background:linear-gradient(#61705c,#435045);
+ clip-path:polygon(0 80%,15% 62%,32% 75%,48% 50%,66% 69%,82% 54%,100% 76%,100% 100%,0 100%);
+}
+.timeline{display:grid;gap:2rem;border-left:2px solid rgba(0,0,0,.12);padding-left:2rem}
+.timeline article{position:relative}
+.timeline article::before{
+content:"";position:absolute;left:-2.6rem;top:.4rem;width:.8rem;height:.8rem;
+border-radius:50%;background:#66785f;
+}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.gallery figure{aspect-ratio:4/3;border-radius:14px;background:linear-gradient(#c9c1b1,#9e9583)}
+footer{padding:4rem 1.5rem;text-align:center;opacity:.75}
