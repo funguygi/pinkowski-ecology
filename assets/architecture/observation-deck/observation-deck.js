@@ -1,0 +1,1 @@
+export class ObservationDeck{initialize(){console.log('Observation Deck RC1')}}
