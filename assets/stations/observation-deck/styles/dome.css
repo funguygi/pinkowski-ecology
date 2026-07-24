@@ -1,0 +1,219 @@
+/*
+==========================================================
+FIELD STATION
+
+Observation Deck
+
+Geodesic Dome System
+
+RC2 Package 3
+==========================================================
+*/
+
+/* ======================================================
+Deck Header
+====================================================== */
+
+.deck-header{
+
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:460px;
+
+    border-radius:32px;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            #efe9df,
+
+            #e2d8c9
+
+        );
+
+    box-shadow:
+
+        0 30px 80px rgba(0,0,0,.18);
+
+}
+
+/* ======================================================
+Dome Shell
+====================================================== */
+
+.dome-shell{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+}
+
+/* ======================================================
+Sky
+====================================================== */
+
+.dome-sky{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+
+            ellipse at center,
+
+            #dbeaf5 0%,
+
+            #bfd4e2 70%,
+
+            #a9bcc8 100%
+
+        );
+
+}
+
+/* ======================================================
+Geodesic Grid
+====================================================== */
+
+.dome-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.18;
+
+    background-image:
+
+        linear-gradient(
+            60deg,
+            rgba(255,255,255,.55) 2px,
+            transparent 2px
+        ),
+
+        linear-gradient(
+            -60deg,
+            rgba(255,255,255,.55) 2px,
+            transparent 2px
+        ),
+
+        linear-gradient(
+            0deg,
+            rgba(255,255,255,.45) 2px,
+            transparent 2px
+        );
+
+    background-size:
+
+        130px 110px;
+
+}
+
+/* ======================================================
+Morning Light
+====================================================== */
+
+.morning-light{
+
+    position:absolute;
+
+    right:-12%;
+
+    top:-15%;
+
+    width:60%;
+
+    height:160%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(255,238,193,.78),
+
+            transparent 72%
+
+        );
+
+    filter:blur(90px);
+
+}
+
+/* ======================================================
+Title Block
+====================================================== */
+
+.deck-title{
+
+    position:relative;
+
+    z-index:5;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+    min-height:460px;
+
+    padding:3rem;
+
+    text-align:center;
+
+}
+
+.deck-title h1{
+
+    margin:.5rem 0;
+
+    font-size:clamp(3rem,5vw,5.5rem);
+
+    font-weight:300;
+
+    letter-spacing:.02em;
+
+}
+
+.deck-introduction{
+
+    max-width:760px;
+
+    line-height:1.8;
+
+    color:#4d5753;
+
+}
+
+/* ======================================================
+Future Astronomy Layer
+====================================================== */
+
+.dome-stars,
+
+.dome-constellations,
+
+.dome-meteor-layer{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}

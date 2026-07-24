@@ -42,8 +42,34 @@ console.log("Creating Arrival controller...");
 
 const arrival = new Arrival();
 
-const observationDeck =
-    new ObservationDeck();
+const observationDeckRoot =
+
+    document.getElementById(
+        "observation-deck"
+    );
+
+    console.log(
+        "Observation Deck Root:",
+        observationDeckRoot
+    );
+
+let observationDeck = null;
+
+if (observationDeckRoot) {
+
+    console.log(
+        "Initializing Observation Deck..."
+    );
+
+    observationDeck =
+
+        new ObservationDeck(
+            observationDeckRoot
+        );
+
+    observationDeck.initialize();
+
+}
 
 console.log(arrival);
 

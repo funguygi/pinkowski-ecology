@@ -1,0 +1,305 @@
+/*
+==========================================================
+
+Great Hall
+
+Release 0.2
+
+==========================================================
+*/
+
+.great-hall{
+
+    display:grid;
+
+    grid-template-rows:
+
+        320px
+
+        1fr
+
+        140px;
+
+    min-height:100vh;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            #f7f2ea,
+
+            #ece4d6
+
+        );
+
+}
+
+#great-room{
+
+    position:relative;
+
+    margin:auto;
+
+    width:min(1800px,94vw);
+
+    min-height:1200px;
+
+}
+
+#great-room::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        url("./svg/glulam-ribs.svg")
+
+        center
+
+        top
+
+        /cover
+
+        no-repeat;
+
+    pointer-events:none;
+
+    opacity:.95;
+
+}
+
+/* =======================================================
+OBSERVATION WINDOW
+======================================================= */
+
+.south-façade{
+
+    display:flex;
+
+    justify-content:center;
+
+    padding-top:4rem;
+
+}
+
+.window-structure{
+
+    position:relative;
+
+    width:min(1500px,92vw);
+
+    height:760px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            #7f6147,
+
+            #5b4331
+
+        );
+
+    box-shadow:
+
+        0 35px 80px rgba(0,0,0,.25);
+
+}
+
+/* ------------------------------------------------------- */
+
+.window-columns{
+
+    position:absolute;
+
+    inset:0;
+
+    display:grid;
+
+    grid-template-columns:
+
+        90px
+
+        1fr
+
+        90px;
+
+    pointer-events:none;
+
+}
+
+/* ------------------------------------------------------- */
+
+.column{
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            #b68d64,
+
+            #6f5137
+
+        );
+
+}
+
+.column.center{
+
+    background:transparent;
+
+}
+
+/* ------------------------------------------------------- */
+
+.window-landscape{
+
+    position:absolute;
+
+    inset:26px;
+
+    overflow:hidden;
+
+    border-radius:10px;
+
+}
+
+.sky-layer{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            #dceef8 0%,
+
+            #b9d8e8 40%,
+
+            #d7d9bf 100%
+
+        );
+
+}
+
+/* ------------------------------------------------------- */
+
+.mountain-layer{
+
+    position:absolute;
+
+    left:-5%;
+
+    right:-5%;
+
+    bottom:180px;
+
+    height:220px;
+
+    background:
+
+        linear-gradient(
+
+            #6c8d8c,
+
+            #556d6d
+
+        );
+
+    clip-path:
+
+        polygon(
+
+            0 100%,
+
+            8% 70%,
+
+            20% 80%,
+
+            35% 40%,
+
+            55% 72%,
+
+            70% 32%,
+
+            84% 78%,
+
+            100% 60%,
+
+            100% 100%
+
+        );
+
+}
+
+.prairie-layer{
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    height:250px;
+
+    background:
+
+        linear-gradient(
+
+            #8fa06a,
+
+            #6e8155
+
+        );
+
+}
+
+.weather-layer{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+.glass-layer{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            110deg,
+
+            transparent,
+
+            rgba(255,255,255,.22),
+
+            transparent
+
+        );
+
+    opacity:.45;
+
+}

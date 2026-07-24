@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1800 900">
+
+    <defs>
+
+        <linearGradient
+            id="oak"
+            x1="0"
+            x2="0"
+            y1="0"
+            y2="1">
+
+            <stop offset="0%"
+                  stop-color="#b58b63"/>
+
+            <stop offset="100%"
+                  stop-color="#6b4d36"/>
+
+        </linearGradient>
+
+    </defs>
+
+    <g
+        stroke="url(#oak)"
+        stroke-width="26"
+        fill="none"
+        stroke-linecap="round">
+
+        <path d="M180 900 Q320 420 900 40"/>
+
+        <path d="M420 900 Q560 330 900 40"/>
+
+        <path d="M680 900 Q760 210 900 40"/>
+
+        <path d="M1120 900 Q1040 210 900 40"/>
+
+        <path d="M1380 900 Q1240 330 900 40"/>
+
+        <path d="M1620 900 Q1480 420 900 40"/>
+
+    </g>
+
+</svg>

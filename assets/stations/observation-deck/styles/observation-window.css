@@ -1,0 +1,329 @@
+/*
+==========================================================
+FIELD STATION
+
+Observation Deck
+
+Observation Window
+
+RC2 Package 3
+==========================================================
+*/
+
+/* ======================================================
+Observation Window
+====================================================== */
+
+.observation-window{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1.5rem;
+
+}
+
+/* ======================================================
+Header
+====================================================== */
+
+.window-header{
+
+    text-align:center;
+
+}
+
+.window-header h1{
+
+    margin:0;
+
+    font-weight:300;
+
+    font-size:
+
+        clamp(
+
+            2.8rem,
+
+            4vw,
+
+            5rem
+
+        );
+
+}
+
+.window-header p{
+
+    max-width:52rem;
+
+    margin:
+
+        1rem auto 0;
+
+    color:#5d655f;
+
+    line-height:1.7;
+
+}
+
+/* ======================================================
+Structural Frame
+====================================================== */
+
+.window-frame{
+
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:760px;
+
+    border-radius:26px;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            #b58b63,
+
+            #6f5038
+
+        );
+
+    box-shadow:
+
+        0 35px 90px rgba(0,0,0,.22);
+
+}
+
+/* ======================================================
+Timber Mullions
+====================================================== */
+
+.window-columns{
+
+    position:absolute;
+
+    inset:0;
+
+    display:grid;
+
+    grid-template-columns:
+
+        70px
+
+        1fr
+
+        70px;
+
+    z-index:20;
+
+    pointer-events:none;
+
+}
+
+.column{
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            #bf9466,
+
+            #78583c
+
+        );
+
+}
+
+.column.center{
+
+    background:transparent;
+
+}
+
+/* ======================================================
+Landscape Renderer
+====================================================== */
+
+#window-landscape{
+
+    position:absolute;
+
+    inset:22px;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+    background:
+
+        linear-gradient(
+
+            #dbeef7,
+
+            #bfd7e4 42%,
+
+            #a9c28f 100%
+
+        );
+
+}
+
+/* ======================================================
+Sky
+====================================================== */
+
+.sky-layer{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            #dceff8 0%,
+
+            #c5dcea 40%,
+
+            #d9e0c8 100%
+
+        );
+
+}
+
+/* ======================================================
+Mountain Layer
+====================================================== */
+
+.mountain-layer{
+
+    position:absolute;
+
+    left:-5%;
+
+    right:-5%;
+
+    bottom:190px;
+
+    height:240px;
+
+    background:
+
+        linear-gradient(
+
+            #728b8b,
+
+            #566c6c
+
+        );
+
+    clip-path:
+
+        polygon(
+
+            0 100%,
+
+            10% 72%,
+
+            26% 80%,
+
+            42% 36%,
+
+            58% 76%,
+
+            74% 30%,
+
+            90% 72%,
+
+            100% 60%,
+
+            100% 100%
+
+        );
+
+}
+
+/* ======================================================
+Prairie
+====================================================== */
+
+.prairie-layer{
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    height:240px;
+
+    background:
+
+        linear-gradient(
+
+            #94a96d,
+
+            #6f8256
+
+        );
+
+}
+
+/* ======================================================
+Weather
+====================================================== */
+
+#weather-layer{
+
+    position:absolute;
+
+    inset:22px;
+
+    pointer-events:none;
+
+}
+
+/* ======================================================
+Glass
+====================================================== */
+
+.glass-reflections{
+
+    position:absolute;
+
+    inset:22px;
+
+    pointer-events:none;
+
+    background:
+
+        linear-gradient(
+
+            115deg,
+
+            rgba(255,255,255,0),
+
+            rgba(255,255,255,.22),
+
+            rgba(255,255,255,0)
+
+        );
+
+    mix-blend-mode:screen;
+
+    opacity:.55;
+
+}

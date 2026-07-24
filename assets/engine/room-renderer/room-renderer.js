@@ -20,6 +20,14 @@ export class RoomRenderer {
 
         this.room = room;
 
+        /*
+        --------------------------------------------------
+        Room Callback
+        --------------------------------------------------
+        */
+
+        this.onUpdate = null;
+
         this.options = options;
 
         this.running = false;
@@ -103,6 +111,16 @@ export class RoomRenderer {
         this.lighting.update(deltaTime);
 
         this.layers.update(deltaTime);
+
+        /**************************************************
+        Room Update
+        **************************************************/
+
+        if (typeof this.onUpdate === "function") {
+
+            this.onUpdate(deltaTime);
+
+        }
 
         requestAnimationFrame(
             (next) => this.update(next)

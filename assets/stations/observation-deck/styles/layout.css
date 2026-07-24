@@ -1,0 +1,203 @@
+/*
+==========================================================
+FIELD STATION
+
+Observation Deck
+
+Layout System
+
+RC2 Package 3
+==========================================================
+*/
+
+:root{
+
+    /*
+    ------------------------------------------------------
+    Materials
+    ------------------------------------------------------
+    */
+
+    --oak:#8A6B49;
+    --oak-dark:#5C4532;
+    --walnut:#604531;
+
+    --limestone:#E5E0D5;
+    --stone:#CFC8BC;
+
+    --moss:#55704D;
+
+    --glass:#DCEAF1;
+    --linen:#F4F0E6;
+
+    --shadow:
+        0 28px 70px rgba(0,0,0,.16);
+
+    --room-width:min(1900px,100vw);
+
+}
+
+/* ======================================================
+Scene
+====================================================== */
+
+.observation-deck-scene{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:stretch;
+
+    padding:
+
+        clamp(2rem,4vw,4rem);
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            #ECE7DD 0%,
+
+            #DDD6C9 100%
+
+        );
+
+}
+
+/* ======================================================
+Room
+====================================================== */
+
+.observation-deck{
+
+    width:100%;
+
+    max-width:var(--room-width);
+
+    min-height:100vh;
+
+    display:grid;
+
+    grid-template-rows:
+
+        auto
+
+        1fr
+
+        auto;
+
+    gap:2.5rem;
+
+}
+
+/* ======================================================
+Great Hall
+====================================================== */
+
+.great-hall{
+
+    display:grid;
+
+    grid-template-columns:
+
+        320px
+
+        minmax(700px,1fr)
+
+        320px;
+
+    gap:
+
+        clamp(2rem,3vw,4rem);
+
+    align-items:start;
+
+}
+
+/* ======================================================
+Side Walls
+====================================================== */
+
+.west-wall,
+.east-wall{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2rem;
+
+}
+
+/* ======================================================
+Center Axis
+====================================================== */
+
+.central-axis{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2rem;
+
+}
+
+/* ======================================================
+Shared Panels
+====================================================== */
+
+.panel{
+
+    border-radius:24px;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            var(--oak),
+
+            var(--oak-dark)
+
+        );
+
+    box-shadow:
+
+        var(--shadow);
+
+    overflow:hidden;
+
+}
+
+/* ======================================================
+Section Titles
+====================================================== */
+
+.panel h2{
+
+    margin:0;
+
+    padding:1.25rem 1.5rem;
+
+    color:white;
+
+    font-weight:400;
+
+    letter-spacing:.04em;
+
+}
+
+/* ======================================================
+Panel Body
+====================================================== */
+
+.panel-body{
+
+    padding:1.5rem;
+
+}
