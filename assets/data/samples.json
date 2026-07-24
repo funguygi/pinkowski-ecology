@@ -1,0 +1,26 @@
+{
+    "samples": [
+
+        {
+            "id": "SC-042",
+            "site": "Terrace A",
+            "depth": "12 cm",
+            "status": "Sequencing"
+        },
+
+        {
+            "id": "SC-043",
+            "site": "Terrace B",
+            "depth": "8 cm",
+            "status": "Processing"
+        },
+
+        {
+            "id": "SC-044",
+            "site": "Oak Woodland",
+            "depth": "15 cm",
+            "status": "Archived"
+        }
+
+    ]
+}

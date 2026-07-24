@@ -1,0 +1,27 @@
+{
+    "title": "Ancient Agricultural Terraces",
+
+    "location": "Wright's Field Preserve",
+
+    "objective": "Characterize soil microbial communities associated with long-term terrace cultivation.",
+
+    "status": "Preparing",
+
+    "priority": "High",
+
+    "lead": "Kyler Pinkowski",
+
+    "fieldDate": "July 2026",
+
+    "methods": [
+
+        "Soil Cores",
+
+        "GPS Survey",
+
+        "Environmental Metadata",
+
+        "DNA Extraction"
+
+    ]
+}

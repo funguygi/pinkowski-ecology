@@ -1,0 +1,529 @@
+/*
+==========================================================
+FIELD STATION
+
+Living Planning Wall
+
+Building System 01
+
+RC2
+==========================================================
+*/
+
+/* ======================================================
+Planning Wall
+====================================================== */
+
+.planning-wall{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2rem;
+
+}
+
+/* ======================================================
+Header
+====================================================== */
+
+.planning-wall-header{
+
+    padding-bottom:1rem;
+
+    border-bottom:
+
+        1px solid rgba(255,255,255,.12);
+
+}
+
+.planning-wall-header h2{
+
+    margin:
+
+        .35rem 0;
+
+    font-size:
+
+        clamp(
+            1.6rem,
+            2vw,
+            2.2rem
+        );
+
+    font-weight:300;
+
+    color:white;
+
+}
+
+.planning-wall-description{
+
+    margin:0;
+
+    color:
+
+        rgba(255,255,255,.72);
+
+    line-height:1.7;
+
+}
+
+/* ======================================================
+Grid
+====================================================== */
+
+.planning-wall-grid{
+
+    display:grid;
+
+    gap:1.5rem;
+
+}
+
+/* ======================================================
+Cards
+====================================================== */
+
+.planning-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(255,255,255,.08),
+
+            rgba(255,255,255,.04)
+
+        );
+
+    border:
+
+        1px solid rgba(255,255,255,.08);
+
+    min-height:170px;
+
+    transition:
+
+        transform .35s ease,
+
+        border-color .35s ease,
+
+        box-shadow .35s ease;
+
+}
+
+/* ======================================================
+Museum Hover
+====================================================== */
+
+.planning-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    background:
+
+        linear-gradient(
+
+            120deg,
+
+            transparent 0%,
+
+            rgba(255,255,255,.14) 40%,
+
+            rgba(214,244,255,.28) 52%,
+
+            rgba(255,255,255,.12) 64%,
+
+            transparent 100%
+
+        );
+
+    transition:
+
+        opacity .45s ease;
+
+}
+
+/* ======================================================
+Interaction
+====================================================== */
+
+.planning-card:hover{
+
+    transform:
+
+        translateY(-2px);
+
+    border-color:
+
+        rgba(202,235,255,.40);
+
+    box-shadow:
+
+        0 12px 30px rgba(0,0,0,.18);
+
+}
+
+.planning-card:hover::before{
+
+    opacity:1;
+
+}
+
+/* ======================================================
+Future Content
+====================================================== */
+
+.planning-card-content{
+
+    padding:1.4rem;
+
+}
+
+/* ======================================================
+Future Titles
+====================================================== */
+
+.planning-card-title{
+
+    margin:0 0 .75rem 0;
+
+    font-size:1rem;
+
+    font-weight:500;
+
+    letter-spacing:.05em;
+
+    text-transform:uppercase;
+
+    color:
+
+        rgba(255,255,255,.90);
+
+}
+
+/* ======================================================
+Future Body
+====================================================== */
+
+.planning-card-body{
+
+    color:
+
+        rgba(255,255,255,.74);
+
+    line-height:1.7;
+
+}
+
+/* ======================================================
+Expedition Card
+====================================================== */
+
+.expedition-section{
+
+    margin-bottom:1.2rem;
+
+}
+
+.expedition-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(2,1fr);
+
+    gap:1rem;
+
+    margin-bottom:1.2rem;
+
+}
+
+.label{
+
+    display:block;
+
+    margin-bottom:.35rem;
+
+    font-size:.72rem;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+    color:
+
+        rgba(255,255,255,.55);
+
+}
+
+.expedition-section p,
+.expedition-grid p{
+
+    margin:0;
+
+    color:white;
+
+    line-height:1.6;
+
+}
+
+/* ======================================================
+GIS Card
+====================================================== */
+
+.gis-map{
+
+    height:140px;
+
+    margin-bottom:1.25rem;
+
+    border-radius:12px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #7f9d69,
+            #58734f
+        );
+
+}
+
+.gis-map::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.18;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.25) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.25) 1px,
+            transparent 1px
+        );
+
+    background-size:
+
+        28px 28px;
+
+}
+
+.plot-marker{
+
+    position:absolute;
+
+    width:14px;
+
+    height:14px;
+
+    left:58%;
+
+    top:42%;
+
+    border-radius:50%;
+
+    background:#f6d46b;
+
+    box-shadow:
+
+        0 0 12px rgba(246,212,107,.6);
+
+}
+
+/* ======================================================
+Sample Card
+====================================================== */
+
+.sample-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.9rem;
+
+}
+
+.sample-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding-bottom:.75rem;
+
+    border-bottom:
+
+        1px solid rgba(255,255,255,.08);
+
+}
+
+.sample-row strong{
+
+    display:block;
+
+    color:white;
+
+    font-weight:500;
+
+}
+
+.sample-row span{
+
+    font-size:.85rem;
+
+    color:rgba(255,255,255,.62);
+
+}
+
+.sample-status{
+
+    font-size:.78rem;
+
+    letter-spacing:.05em;
+
+    text-transform:uppercase;
+
+    color:#d6efc8;
+
+}
+
+/* ======================================================
+Living Moss Panel
+====================================================== */
+
+.moss-wall{
+
+    position:relative;
+
+    overflow:hidden;
+
+    height:180px;
+
+    border-radius:14px;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            #4f6d47,
+
+            #355338
+
+        );
+
+}
+
+.moss-layer{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.65;
+
+    background-repeat:repeat;
+
+}
+
+.layer-1{
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(116,156,104,.55) 2px,
+            transparent 3px
+        );
+
+    background-size:
+
+        18px 18px;
+
+}
+
+.layer-2{
+
+    opacity:.45;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(72,108,65,.70) 3px,
+            transparent 5px
+        );
+
+    background-size:
+
+        32px 32px;
+
+}
+
+.layer-3{
+
+    opacity:.25;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(185,210,171,.30) 1px,
+            transparent 4px
+        );
+
+    background-size:
+
+        14px 14px;
+
+}
+
+.moss-caption{
+
+    margin-top:1rem;
+
+    color:
+
+        rgba(255,255,255,.72);
+
+    line-height:1.6;
+
+}
